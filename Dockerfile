@@ -8,6 +8,7 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="http://github.com/jovrtn/github-action-wpengine-git-deploy"
 LABEL "maintainer"="Jesse L.K. Overton <jesse@ovrtn.com>"
 
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 RUN apt-get update && apt-get install -y git
 
 ADD entrypoint.sh /entrypoint.sh
