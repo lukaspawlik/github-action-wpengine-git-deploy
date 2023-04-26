@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:latest
 
 LABEL "com.github.actions.name"="GitHub Action for WP Engine Git Deployment"
 LABEL "com.github.actions.description"="An action to deploy your repository to a WP Engine site via git."
