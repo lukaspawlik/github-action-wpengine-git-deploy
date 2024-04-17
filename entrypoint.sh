@@ -29,7 +29,7 @@ chmod 600 "$WPENGINE_SSH_KEY_PRIVATE_PATH"
 chmod 644 "$WPENGINE_SSH_KEY_PUBLIC_PATH"
 
 echo "Step 0"
-git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=$KNOWN_HOSTS_PATH"
+git config core.sshCommand "ssh -i $WPENGINE_SSH_KEY_PRIVATE_PATH -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 echo "Step 1"
 git remote add $WPENGINE_ENV git@$WPENGINE_HOST:$WPENGINE_ENV/$WPENGINE_ENVIRONMENT_NAME.git
 echo "Step 2"
